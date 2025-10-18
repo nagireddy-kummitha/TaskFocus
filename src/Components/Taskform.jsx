@@ -17,14 +17,14 @@ export default function Taskform({addTask}) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-        <div>
+    <form onSubmit={handleSubmit} className="task-form">
+        <div id="inp">
             <input value={task} type="text" placeholder='Enter the Task' 
             onChange={(e) => setTask(e.target.value)}/> {/*to get the text from text box */}
 
             <button type='submit'>Add Task</button>
         </div>
-        <div>
+        <div id="btns">
             <select value={priority} onChange={(e) => setPriority(e.target.value)}>
                 <option value="high">High</option>
                 <option value="medium" selected>Medium</option>
